@@ -1,6 +1,6 @@
 import { getRandom } from './constants'
 
-export const ERIC_EXCUSES = [
+const ERIC_EXCUSES = [
   'a minha desculpa agora eh que tem outro dev',
   'po terminei de montar a mesa hoje...',
   'to criando um bot pra slack 😔',
@@ -8,7 +8,7 @@ export const ERIC_EXCUSES = [
   'hoje eu tenho um date... 🥺'
 ]
 
-export const GUMA_EXCUSES = ['bora marcar', 'tenho que vestir meu galo']
+const GUMA_EXCUSES = ['bora marcar', 'tenho que vestir meu galo']
 
 const ANDRE_EXCUSES = [
   'moro do outro lado da cidade',
@@ -17,13 +17,6 @@ const ANDRE_EXCUSES = [
   'tenho outro aniversário no dia',
   'vou adotar outro gato nesse dia'
 ]
-
-export const EXCUSES_BY_PERSON = (person) =>
-  ({
-    eric: ERIC_EXCUSES,
-    guma: GUMA_EXCUSES,
-    andre: ANDRE_EXCUSES
-  }[person] || ERIC_EXCUSES)
 
 const FIRST_PHRASE_EXCUSES = [
   'po terminei de montar',
@@ -41,6 +34,13 @@ const SECOND_PHRASE_EXCUSES = [
 ]
 
 const THIRD_PHRASE_EXCUSES = ['pprt', '🥺', '😔', '😁', '👀', '😏']
+
+export const EXCUSES_BY_PERSON = (person) =>
+  ({
+    eric: ERIC_EXCUSES,
+    guma: GUMA_EXCUSES,
+    andre: ANDRE_EXCUSES
+  }[person] || ERIC_EXCUSES)
 
 export const getRandomReason = (person) => {
   if (person === 'bagre-ensaboado') {
