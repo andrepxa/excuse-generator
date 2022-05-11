@@ -10,10 +10,19 @@ export const ERIC_EXCUSES = [
 
 export const GUMA_EXCUSES = ['bora marcar', 'tenho que vestir meu galo']
 
+const ANDRE_EXCUSES = [
+  'moro do outro lado da cidade',
+  'o tempo mudou',
+  'marcou muito em cima da hora',
+  'tenho outro aniversário no dia',
+  'vou adotar outro gato nesse dia'
+]
+
 export const EXCUSES_BY_PERSON = (person) =>
   ({
     eric: ERIC_EXCUSES,
-    guma: GUMA_EXCUSES
+    guma: GUMA_EXCUSES,
+    andre: ANDRE_EXCUSES
   }[person] || ERIC_EXCUSES)
 
 const FIRST_PHRASE_EXCUSES = [
