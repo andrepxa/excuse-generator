@@ -1,16 +1,15 @@
-import './App.css'
-import Widget from './components/Widget'
-import People from '../src/helpers/people'
-import PersonSelect from './components/PersonSelect'
 import { useState } from 'react'
+import ExcuseGenerator from './components/ExcuseGenerator'
+import PersonSelect from './components/PersonSelect'
+import { people } from '../src/helpers/constants'
+import './App.css'
 
 function App() {
-  const [person, setPerson] = useState(Object.keys(People)[0])
+  const [person, setPerson] = useState(Object.keys(people)[0])
 
-  console.log({ person })
   return (
     <div className="wrapper">
-      <Widget person={person} />
+      <ExcuseGenerator person={person} />
       <PersonSelect person={person} onChangePerson={setPerson} />
     </div>
   )

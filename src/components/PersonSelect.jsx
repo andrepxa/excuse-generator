@@ -1,4 +1,4 @@
-import People from '../helpers/people'
+import { people } from '../helpers/constants'
 
 const PersonSelect = ({ onChangePerson, person }) => (
   <>
@@ -9,7 +9,7 @@ const PersonSelect = ({ onChangePerson, person }) => (
           value={person}
           onChange={({ target }) => onChangePerson(target.value)}
         >
-          {Object.entries(People).map((person, index) => {
+          {Object.entries(people).map((person, index) => {
             return (
               <option value={person[0]} key={index}>
                 {person[1]}

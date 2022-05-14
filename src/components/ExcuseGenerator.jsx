@@ -1,15 +1,13 @@
 import { useCallback, useEffect, useState } from 'react'
-import { getRandomReason } from '../helpers/reasons'
+import { getRandomExcuse } from '../helpers/excuses'
 
-const Widget = ({ person }) => {
-  const [reason, setReason] = useState('')
-
-  console.log('widget', { person })
+const ExcuseGenerator = ({ person }) => {
+  const [excuse, setExcuse] = useState('')
 
   const onSpacePressOrClick = useCallback(
     ({ type, keyCode }) => {
       if (type === 'click' || keyCode === 32) {
-        setReason(getRandomReason(person))
+        setExcuse(getRandomExcuse(person))
       }
     },
     [person]
@@ -21,13 +19,13 @@ const Widget = ({ person }) => {
   })
 
   useEffect(() => {
-    setReason(getRandomReason(person))
+    setExcuse(getRandomExcuse(person))
   }, [person])
 
   return (
     <div className="item">
       <h3 className="tagline">Que desgurpa devo usar hoje?</h3>
-      <h2 id="text">{reason}</h2>
+      <h2 id="text">{excuse}</h2>
       <span id="reload" onClick={onSpacePressOrClick}>
         Hit <span className="space-btn">Space</span> or Click
       </span>
@@ -35,4 +33,4 @@ const Widget = ({ person }) => {
   )
 }
 
-export default Widget
+export default ExcuseGenerator
