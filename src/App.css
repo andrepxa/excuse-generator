@@ -54,11 +54,12 @@ a:focus {
   text-align: center;
   width: 100%;
 }
+
 .wrapper {
   min-height: 100vh;
 
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   justify-content: center;
 }
 
