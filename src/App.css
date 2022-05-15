@@ -158,6 +158,9 @@ ul.footer-list select {
 }
 
 @media screen and (max-width: 400px) {
+  #text {
+    font-size: 5rem;
+  }
   .tagline {
     font-size: 1.5rem;
   }
@@ -167,27 +170,4 @@ ul.footer-list select {
   ul.footer-list select {
     max-width: 70px;
   }
-}
-
-.its-friday {
-  background-color: #ff4136;
-}
-
-.its-friday .tagline {
-  color: #fff;
-}
-
-.its-friday .footer-list li {
-  color: #ff9089;
-}
-
-.its-friday #reload,
-.its-friday .footer-list a {
-  color: #b30a00;
-}
-
-.its-friday .space-btn,
-.its-friday span {
-  border-color: #b30a00;
-  color: #b30a00;
 }
