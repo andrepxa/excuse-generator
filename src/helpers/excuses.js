@@ -6,7 +6,9 @@ const ERIC_EXCUSES = [
   'to criando um bot pra slack 😔',
   'hoje tem prova do lider caraio...',
   'hoje eu tenho um date... 🥺',
-  'eu vou dormir 😭'
+  'eu vou dormir 😭',
+  'estou decidindo se vou ate a universidade rolezar 🌹',
+  'hoje tem formatura de um amigo'
 ]
 
 const GUMA_EXCUSES = ['bora marcar', 'tenho que vestir meu galo']
@@ -37,11 +39,11 @@ const SECOND_PHRASE_EXCUSES = [
 const THIRD_PHRASE_EXCUSES = ['pprt', '🥺', '😔', '😁', '👀', '😏']
 
 const EXCUSES_BY_PERSON = (person) =>
-  ({
-    eric: ERIC_EXCUSES,
-    guma: GUMA_EXCUSES,
-    andre: ANDRE_EXCUSES
-  }[person] || ERIC_EXCUSES)
+({
+  eric: ERIC_EXCUSES,
+  guma: GUMA_EXCUSES,
+  andre: ANDRE_EXCUSES
+}[person] || ERIC_EXCUSES)
 
 export const getRandomExcuse = (person) => {
   if (person === 'bagre-ensaboado') {
